@@ -1,2 +1,20 @@
 mini-exchange-architecture.md
 mini-exchange-build-plan.md
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+bin/
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
