@@ -11,4 +11,3 @@ class PlaceholderTest {
     assertThat(true).isTrue();
   }
 }
-
