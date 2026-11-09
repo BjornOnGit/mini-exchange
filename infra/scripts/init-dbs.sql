@@ -1,0 +1,21 @@
+-- One database and one login role per service. Local development credentials only.
+
+CREATE ROLE orders LOGIN PASSWORD 'orders_dev';
+CREATE DATABASE orders OWNER orders;
+REVOKE CONNECT ON DATABASE orders FROM PUBLIC;
+
+CREATE ROLE ledger LOGIN PASSWORD 'ledger_dev';
+CREATE DATABASE ledger OWNER ledger;
+REVOKE CONNECT ON DATABASE ledger FROM PUBLIC;
+
+CREATE ROLE engine LOGIN PASSWORD 'engine_dev';
+CREATE DATABASE engine OWNER engine;
+REVOKE CONNECT ON DATABASE engine FROM PUBLIC;
+
+CREATE ROLE gateway LOGIN PASSWORD 'gateway_dev';
+CREATE DATABASE gateway OWNER gateway;
+REVOKE CONNECT ON DATABASE gateway FROM PUBLIC;
+
+CREATE ROLE recon LOGIN PASSWORD 'recon_dev';
+CREATE DATABASE recon OWNER recon;
+REVOKE CONNECT ON DATABASE recon FROM PUBLIC;
